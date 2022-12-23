@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	Utils "gitlab.com/tesseract/backend/utils"
+	Utils "github.com/marcomaiermm/tesseract-bachelor/utils"
 )
 
 type Defect struct {

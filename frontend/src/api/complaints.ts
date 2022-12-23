@@ -1,6 +1,6 @@
-import baseApiCall from './base';
-import z from 'zod';
-import { ParsedQs } from 'qs';
+import baseApiCall from "./base";
+import z from "zod";
+import { ParsedQs } from "qs";
 
 export const Complaint = z.object({
   id: z.number(),
@@ -22,11 +22,11 @@ type Complaint = z.infer<typeof Complaint>;
  * @returns Complaints array data
  */
 export const getComplaints = async (options: ParsedQs = {}) => {
-  const data = await baseApiCall<Complaint[]>('/complaint', options);
-  return Complaint.array().parse(data);
+  const data = await baseApiCall<Complaint[]>("/complaint", options);
+  return Complaint.array().parseAsync(data);
 };
 
 export const getComplaint = async (id: number) => {
   const data = await baseApiCall<Complaint>(`/complaint/${id}`);
-  return Complaint.parse(data);
+  return Complaint.parseAsync(data);
 };

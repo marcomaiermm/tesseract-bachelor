@@ -17,12 +17,12 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@lib/*": ["src/lib/*"],
       "@components/*": ["src/components/*"],
       "@pages/*": ["src/pages/*"],
       "@utils/*": ["src/utils/*"],
       "@stores/*": ["src/stores/*"],
       "@api/*": ["src/api/*"],
+      "@hooks/*": ["src/hooks/*"],
       "@/*": ["src/*"]
     }
   },

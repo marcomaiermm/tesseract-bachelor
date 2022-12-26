@@ -21,4 +21,3 @@ const routeConfig = rootRoute.addChildren([
 ]);
 
 export const router = createReactRouter({ routeConfig });
-console.log(router);

@@ -2,11 +2,18 @@ import { ParsedQs } from "qs";
 import { useQuery } from "@tanstack/react-query";
 import { getComplaint, getComplaints } from "@api/complaints";
 
-export const useComplaints = (options: ParsedQs = {}, enabled = false) => {
+// export const useComplaints = (options: ParsedQs = {}, enabled = false) => {
+//   return useQuery(
+//     ["complaints", options],
+//     async () => await getComplaints(options),
+//     { enabled }
+//   );
+// };
+
+export const useComplaints = (options: ParsedQs = {}) => {
   return useQuery(
     ["complaints", options],
-    async () => await getComplaints(options),
-    { enabled }
+    async () => await getComplaints(options)
   );
 };
 

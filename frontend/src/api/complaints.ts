@@ -14,7 +14,7 @@ export const Complaint = z.object({
   material: z.string(),
 });
 
-type Complaint = z.infer<typeof Complaint>;
+export type Complaint = z.infer<typeof Complaint>;
 
 /**
  * getComlpaints - get all comlplaints from the backend api route
